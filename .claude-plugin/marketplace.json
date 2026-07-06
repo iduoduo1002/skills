@@ -40,6 +40,26 @@
         "./skills/web-artifacts-builder",
         "./skills/webapp-testing"
       ]
+    },
+    {
+      "name": "journal-skills",
+      "description": "Collection of academic journal submission skills covering artifact evaluation, author responses, camera-ready preparation, experiments, related work, reproducibility, review processes, submission guidelines, supplementary materials, topic selection, workflow management, and writing style for major conferences and journals",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/journal-skills/aaai-artifact-evaluation",
+        "./skills/journal-skills/aaai-author-response",
+        "./skills/journal-skills/aaai-camera-ready",
+        "./skills/journal-skills/aaai-experiments",
+        "./skills/journal-skills/aaai-related-work",
+        "./skills/journal-skills/aaai-reproducibility",
+        "./skills/journal-skills/aaai-review-process",
+        "./skills/journal-skills/aaai-submission",
+        "./skills/journal-skills/aaai-supplementary",
+        "./skills/journal-skills/aaai-topic-selection",
+        "./skills/journal-skills/aaai-workflow",
+        "./skills/journal-skills/aaai-writing-style"
+      ]
     }
   ]
 }
