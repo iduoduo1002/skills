@@ -47,6 +47,16 @@
       "source": "./",
       "strict": false,
       "skills": []
+    },
+    {
+      "name": "writing-skills",
+      "description": "Research-grounded skills for humanizing AI-flavored text and forensically auditing text for AI-generation signals (from harshaneel/humanize)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/humanize",
+        "./skills/ai-check"
+      ]
     }
   ]
 }
