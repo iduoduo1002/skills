@@ -51,7 +51,11 @@ user has approved the rule set in Phase 1's report.
   plausible rename target — safe to auto-fix.
 - Links with ambiguous or no plausible target — list for the user, don't guess.
 - Orphaned notes: no other note links to them, and they don't appear in any MOC/index. Not
-  necessarily a "bug," but useful to flag for notes that were meant to be linked in.
+  necessarily a "bug" on its own — flag it, don't auto-fix it. It's worth escalating to the user
+  specifically when a note is **both** orphaned and stale (unmodified for a long stretch,
+  e.g. 180+ days): that combination is a much stronger "this got lost" signal than either alone.
+  If the vault has Dataview, `vault-structure-advisory.md` has ready-to-use queries for both
+  checks that the user can keep re-running after this audit.
 - Alias mismatches: a link's display text via `[[Target|Alias]]` doesn't match any `aliases:`
   entry on the target note, when the vault otherwise uses `aliases:` consistently.
 

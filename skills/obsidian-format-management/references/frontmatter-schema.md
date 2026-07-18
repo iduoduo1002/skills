@@ -47,6 +47,25 @@ source-type:
 Common fields first, literature-specific fields after, omitted fields simply absent (don't pad
 with empty values) unless the vault's existing convention does otherwise.
 
+## Make it durable, not just correct right now
+
+A one-time cleanup pass drifts out of format again as soon as the user creates their next note
+by hand. Two things make the schema stick:
+
+- **Type the properties once.** In Obsidian's Settings → Properties view, set each field's type
+  globally (`date` → date, `year` → number, `tags`/`authors`/`aliases` → list, etc.). This is
+  what makes `date` sortable and `tags` filterable reliably in Dataview, instead of depending on
+  every note happening to use valid YAML by coincidence. Suggest doing this once as part of
+  Phase 2, not per-note.
+- **Suggest a Templater template**, if the Templater plugin is present (or the user is open to
+  installing it), that pre-fills this schema at note-creation time — so new notes start
+  compliant instead of needing another cleanup pass later. This is a suggestion, not something
+  to set up unprompted.
+
+See `vault-structure-advisory.md` for more on property types and automation plugins (Templater,
+Linter, Dataview) — consult it when the user wants the format to stay clean going forward, not
+just fixed once.
+
 ## Applying this in Phase 2
 
 1. For each note, read current frontmatter (if any) via the Obsidian MCP `get_file_contents`-style

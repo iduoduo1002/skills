@@ -1,6 +1,6 @@
 ---
 name: obsidian-format-management
-description: Audits and normalizes formatting across an Obsidian vault via its MCP tools (frontmatter/YAML fields, tag taxonomy, Markdown conventions, wikilinks, file naming) and cross-checks literature notes against a connected Zotero library. Use when the user asks to clean up, standardize, audit, or fix formatting/metadata in Obsidian notes or literature notes, to reconcile Obsidian citation fields with Zotero, or to build a tag/frontmatter convention for a vault. Requires an Obsidian MCP connection (and optionally a Zotero MCP connection) to already be available as tools in the session — check for them first and tell the user how to connect if missing.
+description: Audits and normalizes formatting across an Obsidian vault via its MCP tools (frontmatter/YAML fields, tag taxonomy, Markdown conventions, wikilinks, file naming) and cross-checks literature notes against a connected Zotero library. Also offers optional, advice-only guidance on vault organization (PARA/Zettelkasten/MOC structure, typed Properties, Templater/Linter/Dataview automation, orphan/dangling-link maintenance). Use when the user asks to clean up, standardize, audit, or fix formatting/metadata in Obsidian notes or literature notes, to reconcile Obsidian citation fields with Zotero, to build a tag/frontmatter convention, or to get suggestions on organizing/maintaining an Obsidian vault. Requires an Obsidian MCP connection (and optionally a Zotero MCP connection) to already be available as tools in the session — check for them first and tell the user how to connect if missing.
 ---
 
 # Obsidian Format Management
@@ -78,6 +78,9 @@ above.
   blank lines.
 - Find and report broken `[[wikilink]]` targets; fix the unambiguous ones (e.g. the target was
   renamed and there's exactly one plausible match), list the rest for the user.
+- Before renaming any file, confirm Obsidian's "Automatically update internal links" setting is
+  on (see `references/vault-structure-advisory.md`) — without it, a rename silently breaks every
+  link pointing to that file.
 
 ### Phase 4 — Zotero cross-check (only if Zotero tools are available)
 
@@ -89,7 +92,19 @@ no confident Zotero match go on a separate list — do not invent bibliographic 
 ### Phase 5 — Wrap-up
 
 Summarize: files touched, issues fixed by category, what's left in the "unresolved" lists, and
-the path to `_format-cleanup-log.md`.
+the path to `_format-cleanup-log.md`. If the vault lacks automation to keep the format from
+drifting again (no Templater/Linter), mention that as a follow-up option — see
+`references/vault-structure-advisory.md` — rather than assuming another manual pass is wanted.
+
+### Optional — structural/organizational advice
+
+Everything above is about formatting existing notes, not how the vault is organized. If the
+user separately asks for advice on vault structure (folders vs. tags, PARA, Zettelkasten,
+Maps of Content, note-taking method), consult `references/vault-structure-advisory.md`. Treat it
+as **advice to offer, not a migration to execute** — restructuring folders or introducing a new
+organizational scheme is much higher blast-radius than the formatting fixes in Phases 1–5, so it
+needs its own explicit conversation and shouldn't be bundled into a formatting cleanup
+unprompted.
 
 ## References
 
@@ -100,3 +115,6 @@ the path to `_format-cleanup-log.md`.
   schema to match theirs rather than imposing it.
 - `references/zotero-crosscheck.md` — how to match literature notes to Zotero items and resolve
   conflicts in Phase 4.
+- `references/vault-structure-advisory.md` — optional organizational guidance (PARA,
+  Zettelkasten, MOCs, property types, maintenance automation via Templater/Linter/Dataview,
+  safe-rename settings). Advisory only; not part of the default auto-write workflow.
