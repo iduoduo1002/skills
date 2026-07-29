@@ -2,6 +2,10 @@
 
 A dynamic skills loading tool that allows you to automatically load skills for a specific academic journal.
 
+> Also in this directory: `setup-knowledge-work-plugins.sh` installs selected plugins from
+> `anthropics/knowledge-work-plugins` (an external marketplace in a different repo owner tier,
+> so it must be run locally, not inside this remote session). See that script's header for usage.
+
 ## Overview
 
 This tool manages a collection of 195+ academic journals and their submission/review skills. Instead of installing all skills at once, you can dynamically load skills for your target journal.
