@@ -58,6 +58,23 @@
         "./skills/ai-check",
         "./skills/academic-writing"
       ]
+    },
+    {
+      "name": "cnki-skills",
+      "description": "Browser-driven CNKI (China National Knowledge Infrastructure) literature workflow: search, filter, parse results, page through, read paper detail, browse journals, download PDFs, and export citations, coordinated by a cnki-researcher agent (from longkou1988/cnki-skills). Requires a browser connector (e.g. Chrome DevTools MCP) and the user's own authorized/institutional CNKI access; does not bypass login, CAPTCHA, or paywalls.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cnki-search",
+        "./skills/cnki-advanced-search",
+        "./skills/cnki-parse-results",
+        "./skills/cnki-navigate-pages",
+        "./skills/cnki-paper-detail",
+        "./skills/cnki-journal-browse",
+        "./skills/cnki-download",
+        "./skills/cnki-export",
+        "./skills/cnki-researcher"
+      ]
     }
   ]
 }
