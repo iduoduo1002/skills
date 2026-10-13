@@ -75,6 +75,15 @@
         "./skills/cnki-export",
         "./skills/cnki-researcher"
       ]
+    },
+    {
+      "name": "manimgx-skills",
+      "description": "Create and refine mathematical or 3D animations in Python with ManimGX (from academa-labs/manimgx, MIT). Requires Python 3.13+ and `pip install manimgx` (or `uv tool install --python 3.14 manimgx`).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/manimgx"
+      ]
     }
   ]
 }
